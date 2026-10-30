@@ -180,7 +180,21 @@ document.querySelector('#root').innerHTML = `
             <a class="contact-link" href="tel:+250794595041" data-testid="link-phone"><span><small>Phone</small><br>+250794595041</span><span aria-hidden="true">↗</span></a>
             <div class="contact-link"><span><small>Location</small><br>Ruhango / Nyamirambo, Rwanda</span><span aria-hidden="true">⌖</span></div>
           </div>
-          <footer class="footer"><span>© 2026 Mame Gedeon</span><span class="footer-credit">Coded by Ayamikani Rukundo</span><a href="#home" class="footer-home">Back to top ↑</a></footer>
+          <footer class="footer">
+            <div class="footer-signoff">
+              <span class="footer-mark" aria-hidden="true">M</span>
+              <div class="footer-signoff-copy">
+                <p class="footer-message">Thanks for being here.</p>
+                <p class="footer-note">Curious mind. Steady rhythm. Shared purpose.</p>
+              </div>
+              <a href="#home" class="footer-home">Back to top <span aria-hidden="true">↑</span></a>
+            </div>
+            <!-- Developed by Ayamikani Rukundo; portfolio content and direction by Mame Gedeon. -->
+            <div class="footer-meta">
+              <span>© ${new Date().getFullYear()} Mame Gedeon. All rights reserved.</span>
+              <span>Rwanda · East Africa</span>
+            </div>
+          </footer>
         </div>
       </section>
     </main>

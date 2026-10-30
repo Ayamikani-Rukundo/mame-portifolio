@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Mame Gedeon Portfolio"
+description = "A polished, responsive personal portfolio for Mame Gedeon, highlighting his academic journey, youth advocacy, leadership, activities, achievements, and contact details."
+version = "1.0.0"
+id = "artifacts/mame-gedeon-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20742
+
+[services.development]
+run = "pnpm --filter @workspace/mame-gedeon-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mame-gedeon-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mame-gedeon-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20742"
+BASE_PATH = "/"

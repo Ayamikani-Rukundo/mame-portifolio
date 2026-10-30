@@ -1,0 +1,51 @@
+Build a stunning, highly innovative, fully responsive single-page personal portfolio web app for Mame Gedeon. The entire site must be hard-coded (no database or external API dependencies) using standard HTML, Tailwind CSS, and vanilla JavaScript so it builds instantly and conserves free-tier resources.
+
+### Design System & Theme:
+- Color Palette: Inspiration drawn from Rwandan military themes—deep forest/dark green as primary, clean white, dynamic sky blue accents, and subtle energetic red highlights.
+- Visual Innovation: Avoid plain colored backgrounds. Use dynamic layered CSS gradients, smooth canvas/particle line effects, and subtle entry animations (slide-ins, soft fades). 
+- Card Design: Include an eye-catching, floating "glassmorphism" card layout on the main hero section to showcase Mame's portrait and intro.
+
+### Navigation & Page Structure:
+Include a sleek, glass-effect navigation bar for: Home, About, Activities, Projects & Competitions, Skills, Certificates, and Contact.
+
+### Comprehensive Hard-Coded Content & Storytelling:
+
+1. Home & Hero Section:
+- Header: Mame Gedeon | Scholar, Student Leader & Youth Advocate.
+- Subtitle & Bio: Student at Ecole des Sciences Byimana (Graduating July 2026, Advanced Level in Mathematics, Chemistry, and Biology). Driven by a passion for community impact, STEM education, debate, and music.
+- Contact Quick-Links: Email (m.gedeon4@isomo.rw), Phone (+250794595041), Location (Ruhango / Nyamirambo, Rwanda).
+
+2. About Me:
+- Provide an engaging narrative describing Mame's journey as an academic achiever, volunteer teacher, and leader. Detail his commitment to helping peers, organizing community health initiatives, and leveraging public speaking and music to empower youth.
+
+3. Interactive Activities & Extracurriculars (Modal Overlay System):
+- Interactive Mechanism: Render activities as clean, interactive cards. Clicking any card opens a sleek, semi-transparent modal overlay keeping the main site blurred in the background. The modal must include detailed descriptions and "Previous" / "Next" navigation controls to browse seamlessly.
+- Data to Include:
+  * MindLeaps Rwanda (Teacher & Tutor, Aug 2023–Present): Teaches Advanced Level students Mathematics, Chemistry, and Biology while boosting their public speaking skills. Facilitates O-Level students in core subjects and English during holidays, and delivers ICT training to master computer literacy and internet navigation.
+  * Heart of Sympathy Initiative (Co-Founder & Partnership Lead, Dec 2025–Present): Leads outreach to supply school materials (mathematical sets, notebooks, pens) to vulnerable students at Rubona Primary School. Coordinates meetings with school administration, records meeting insights, and creates peer-tutoring networks pairing high performers with struggling students.
+  * E. Sc. Byimana / Journalism & Magazine Club (President & Coach, Sept 2023–Sept 2026): Coached 27+ news presenters in public speaking and presentation. Authored, edited, and published school news and the annual magazine, keeping the community informed.
+  * Byimana Center of Writing / BCW (Vice-President & Co-Founder, July 2023–Present): Plans curriculum, organizes meetings/events, and teaches effective academic essay writing, public speaking, and reading strategies.
+  * Red Cross Youth Movement (President & Active Member, Sept 2023–July 2026): Coordinated rapid first aid services during school and public gatherings. Provided compassionate support, water, and care during the 1994 Genocide against the Tutsi commemoration events.
+  * Youth Volunteering Group / Nyamirambo (Volunteer, 2020–2021): Participated in Umuganda community work, promoted hygiene, and constructed kitchen gardens to combat malnutrition diseases.
+
+4. Projects, Competitions & Leadership (Interactive Modal System):
+- National Bank of Rwanda Economics Quiz Challenge: Member of the winning team that tied for 1st place nationwide.
+- National Live Band & Music Competitions: Placed 3rd nationwide as a Solo Guitarist; led the school band (Rythmix Band) performing at district and national level events.
+- Academic Competitions: Reached Round 3 in the AIMS competition and qualified for the National Level in the Rwanda Mathematics Competition.
+- iDebate Interschool Competitions: Awarded Best Speaker for persuasive argumentation, critical thinking, and debate performance; served as a debate judge for Grade 10 and 11 competitions.
+- Sports & Culture Leadership: Served as Volleyball Libero (inter-school competitions), Basketball Point Guard, Football Striker, and Lead Drummer for the Indindamakuzu Traditional Dance Troupe.
+
+5. Skills & Competencies:
+- Visual Display: Interactive progress cards with visual proficiency bars.
+- Categories:
+  * Data & Research (Excel, Survey Design, Data Organization, Research Analysis)
+  * Technical & Digital (Word Processing, HTML/CSS, ICT Instruction)
+  * Communication & Leadership (Public Speaking, Facilitation, Academic Writing, Event Coordination, Financial Planning)
+  * Performing Arts & Sports (Guitar Solo/Tenor Vocal, Traditional Drumming, Volleyball, Basketball, Karate)
+
+6. Certificates & Portfolio Attachments:
+- Interactive preview cards displaying placeholders and direct links to Mame's achievement certificates.
+
+7. Contact & Footer:
+- Direct contact layout with phone (+250794595041) and email (m.gedeon4@isomo.rw).
+- Footer Requirement: Must feature the text "Coded by Ayame Kani" at the bottom.

@@ -10,27 +10,27 @@ const activities = [
   { title: 'Research & Development Club', role: 'Member · Sept 2023–June 2024', description: 'Helped coordinate general-knowledge quizzes covering topics such as sports, current affairs, and entertainment. Encouraged curiosity, research habits, and independent learning among students.' },
   { title: 'Mathematics Club', role: 'Coach & Mentor', description: 'Coached students in creative problem-solving approaches for Olympiad-style questions and supported classmates and other students who were struggling with Mathematics.' },
   { title: 'Community Education & Health', role: 'Local Volunteer & Independent Researcher', description: 'Helped organize educational opportunities for local students and took part in community health education. Also researched gaps in health-insurance coverage, bringing attention to barriers people encounter.' },
-  { title: 'Music & Guitar Mentorship', role: 'Guitarist · Tenor Singer · Community Teacher', description: 'Self-taught guitar from age eleven and played with school and church choirs and live bands. Choreographed church performances, helped train new choir members in tenor technique and harmony, and shared music as a community service by teaching children guitar.' },
+  { title: 'Music & Guitar Mentorship', role: 'Guitarist · Drummer · Tenor Singer · Community Teacher', description: 'A self-taught guitarist since age eleven, I have performed with school and church choirs and live bands, including on national stages. I also play drums, choreograph church performances, help train choir members in tenor technique and harmony, and teach children guitar.' },
   { title: 'Cultural Events & Documentary Shows', role: 'Event Organizer & Performer', description: 'Helped organize school cultural events and performances, appeared in documentary presentations at various shows, and performed instrumental music in talent events.' },
   { title: 'Student & Entrepreneurship Leadership', role: 'Assistant Class Monitor · Table Leader · Club Member', description: 'Took on everyday classroom leadership as an assistant class monitor and table leader, and participated in the Entrepreneurship Club.' },
 ];
 const projects = [
   { title: 'National Bank of Rwanda Economics Quiz Challenge', category: 'National competition', description: 'Member of the winning team that tied for 1st place nationwide.' },
-  { title: 'National Live Band & Music Competitions', category: 'Music · National level', description: 'Placed 3rd nationwide as a solo guitarist. Founded and led Rythmix Band as its president, performing at school, district, and national-level events.' },
+  { title: 'National Live Band & Music Competitions', category: 'National top-three · Music', description: 'A guitarist and drummer, my work has taken me from school performances to national stages. I placed 3rd nationwide as a solo guitarist and founded and led Rythmix Band as its president.' },
   { title: 'Academic Competitions', category: 'Mathematics & sciences', description: 'Reached Round 3 in the AIMS competition and qualified for the National Level in the Rwanda Mathematics Competition.' },
   { title: 'iDebate Interschool Competitions', category: 'Debate & public speaking', description: 'Recognized as Best Speaker for persuasive argumentation and critical thinking, judged Grade 10 and 11 school debates, and debated with fellow students in a 2025 win.' },
   { title: 'Sports & Culture Leadership', category: 'School & community', description: 'Captained the inter-school volleyball team as Libero, collaborating with more than 20 players in selection for a six-player side and mentoring newer players. Also played Basketball Point Guard and Football Striker, and led drums for the Indindamakuzu Traditional Dance Troupe.' },
 ];
 const certificates = [
-  { title: 'Achievement certificate 01', category: 'Certificate link placeholder', description: 'The CV contains an authenticated Google viewer URL for this certificate. Replace it with a stable public sharing link or upload the certificate file before linking it here.' },
-  { title: 'Achievement certificate 02', category: 'Certificate link placeholder', description: 'The CV contains an authenticated Google viewer URL for this certificate. Replace it with a stable public sharing link or upload the certificate file before linking it here.' },
-  { title: 'Achievement certificate 03', category: 'Certificate link placeholder', description: 'The CV contains an authenticated Google viewer URL for this certificate. Replace it with a stable public sharing link or upload the certificate file before linking it here.' },
+  { title: 'Achievement certificate 01', category: 'Attachment coming soon', description: 'This certificate will be added soon.' },
+  { title: 'Achievement certificate 02', category: 'Attachment coming soon', description: 'This certificate will be added soon.' },
+  { title: 'Achievement certificate 03', category: 'Attachment coming soon', description: 'This certificate will be added soon.' },
 ];
 const skillGroups = [
   { title: 'Data & Research', skills: [['Excel', 82], ['Survey Design', 76], ['Data Organization', 84], ['Research Analysis', 72]] },
   { title: 'Technical & Digital', skills: [['Word Processing', 86], ['HTML/CSS', 62], ['ICT Instruction', 82]] },
   { title: 'Communication & Leadership', skills: [['Public Speaking', 92], ['Facilitation', 86], ['Academic Writing', 88], ['Event Coordination', 80], ['Financial Planning', 68], ['Project Coordination & Leadership', 88], ['Entrepreneurship & Life Skills', 74]] },
-  { title: 'Performing Arts & Sports', skills: [['Guitar Solo / Tenor Vocal', 84], ['Traditional Drumming', 82], ['Rwandan Culture', 80], ['Volleyball', 78], ['Basketball', 74], ['Karate', 65]] },
+  { title: 'Music & Performance', skills: [['Guitar Performance', 94], ['Traditional Drumming', 92], ['Tenor Vocal & Harmony', 88], ['Rwandan Culture', 90], ['Volleyball', 78], ['Basketball', 74], ['Karate', 65]] },
 ];
 const activityMarkup = activities.map((item, i) => `
   <button class="activity-card reveal" type="button" data-modal-group="activities" data-index="${i}" data-testid="card-activity-${i}">
@@ -46,7 +46,7 @@ const certificateMarkup = certificates.map((item, i) => `
   <button class="certificate-card" type="button" data-modal-group="certificates" data-index="${i}" data-testid="card-certificate-${i}" aria-haspopup="dialog">
     <span class="cert-top"><span>Certificate</span><span>0${i + 1}</span></span>
     <span class="cert-copy"><span class="cert-title">${item.title}</span><span class="cert-description">${item.description}</span></span>
-    <span class="cert-state">PLACEHOLDER · SELECT TO PREVIEW</span>
+    <span class="cert-state">ATTACHMENT COMING SOON</span>
   </button>`).join('');
 const skillMarkup = skillGroups.map((group, i) => `
   <button type="button" class="skill-card reveal" aria-pressed="false" data-testid="card-skill-${i}">
@@ -60,26 +60,48 @@ document.querySelector('#root').innerHTML = `
     <header class="topbar">
       <nav class="nav-wrap" aria-label="Main navigation">
         <a class="brand" href="#home" aria-label="Mame Gedeon home"><span class="brand-mark">M</span><span>Mame Gedeon</span></a>
-        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links" data-testid="button-mobile-menu"><span aria-hidden="true">☰</span></button>
         <div class="nav-links" id="nav-links">
           <a href="#home" data-testid="link-home">Home</a><a href="#about" data-testid="link-about">About</a><a href="#education" data-testid="link-education">Education</a><a href="#activities" data-testid="link-activities">Activities</a><a href="#projects" data-testid="link-projects">Projects &amp; Competitions</a><a href="#skills" data-testid="link-skills">Skills</a><a href="#certificates" data-testid="link-certificates">Certificates</a><a class="nav-contact" href="#contact" data-testid="link-contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" data-testid="button-theme-toggle">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z"/></svg>
+          </button>
+          <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links" data-testid="button-mobile-menu"><span aria-hidden="true">☰</span></button>
         </div>
       </nav>
     </header>
     <main>
       <section class="hero" id="home" aria-labelledby="hero-title">
         <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+        <div class="hero-landscape" aria-hidden="true">
+          <svg viewBox="0 0 1440 760" preserveAspectRatio="xMidYMax slice">
+            <defs>
+              <linearGradient id="ridge-back" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--landscape-back)"/><stop offset="1" stop-color="var(--landscape-front)"/></linearGradient>
+              <linearGradient id="ridge-front" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="var(--landscape-front)"/><stop offset=".55" stop-color="var(--landscape-glow)"/><stop offset="1" stop-color="var(--landscape-back)"/></linearGradient>
+            </defs>
+            <path class="landscape-ridge landscape-ridge-back" fill="url(#ridge-back)" d="M560 760c110-100 100-216 226-284 105-56 147-6 233-95 79-82 104-169 208-163 88 5 113 68 213 47v495Z"/>
+            <path class="landscape-ridge landscape-ridge-mid" fill="var(--landscape-mid)" d="M720 760c101-66 132-195 255-211 82-11 110 50 193 18 105-40 135-163 272-135v328Z"/>
+            <path class="landscape-ridge landscape-ridge-front" fill="url(#ridge-front)" d="M500 760c185-46 184-161 326-172 118-9 141 75 250 57 112-19 200-141 364-95v210Z"/>
+            <path class="landscape-contour" d="M650 760c148-72 188-179 330-195 121-13 166 48 280 13 70-22 115-68 180-78"/>
+            <path class="landscape-contour" d="M762 760c135-75 181-147 296-159 114-12 173 35 283 2 43-13 78-33 112-50"/>
+            <path class="landscape-contour" d="M878 760c99-67 150-111 236-119 93-9 154 20 237-5"/>
+            <circle class="landscape-star" cx="1184" cy="158" r="3"/><circle class="landscape-star landscape-star-small" cx="1290" cy="246" r="2"/><circle class="landscape-star" cx="1052" cy="281" r="2.5"/>
+            <path class="landscape-beam" d="M1184 158v120m106-32v84m-238-49v75"/>
+          </svg>
+        </div>
         <div class="hero-grid">
           <div class="hero-text reveal is-visible">
             <div class="eyebrow">Ruhango / Nyamirambo, Rwanda</div>
             <h1 id="hero-title">Mame<br><em>Gedeon</em></h1>
-            <p class="hero-copy">Scholar, Student Leader &amp; Youth Advocate. A 2025/2026 Grade 12 graduate of Ecole des Sciences Byimana, where I studied Mathematics, Chemistry, and Biology. My work brings together community impact, STEM education, debate, and music.</p>
-            <div class="hero-ctas"><a class="button button-primary" href="#about">Explore my story <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="mailto:m.gedeon4@isomo.rw">Write to me <span aria-hidden="true">↗</span></a></div>
+            <p class="hero-copy">Student at Bridge2Rwanda Isomo Academy, Cohort 4, and a 2025/2026 graduate of Ecole des Sciences Byimana, where I studied Mathematics, Chemistry, and Biology. My work brings together community impact, STEM tutoring, debate, and music.</p>
+            <div class="hero-ctas"><a class="button button-primary" href="#about">Explore my story <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="#contact">Write to me <span aria-hidden="true">↗</span></a></div>
             <div class="hero-note"><span class="note-line"></span><span>Learning with purpose. Leading with care.</span></div>
           </div>
           <div class="portrait-stage reveal delay-1">
-            <div class="portrait-card"><img class="portrait-image" src="/mame-gedeon-portrait.jpeg" alt="Mame Gedeon smiling in a black suit and white shirt"><div class="portrait-label"><span>Scholar · Tutor · Advocate</span><span>Mame Gedeon</span></div></div>
-            <div class="float-card"><strong>2025/2026</strong><span>MCB · GRADE 12</span></div>
+            <div class="portrait-card"><img class="portrait-image" src="/mame-gedeon-portrait.jpeg" alt="Mame Gedeon smiling in a black suit and white shirt"><div class="portrait-label"><span>Scholar · Musician · Advocate</span><span>Mame Gedeon</span></div></div>
+            <div class="float-card"><strong>COHORT 4</strong><span>ISOMO ACADEMY</span></div>
             <div class="hero-location">RWANDA · EAST AFRICA</div>
           </div>
         </div>
@@ -90,8 +112,8 @@ document.querySelector('#root').innerHTML = `
           <div class="about-layout">
             <div class="about-aside reveal"><h2 class="section-heading" id="about-title">Many roles.<br><em>One purpose.</em></h2><div class="about-stamp"><span class="stamp-text">Curiosity in service of community</span></div></div>
             <div class="about-copy reveal delay-1">
-              <p>I grew up in Kamabuye, where long walks to school and the well shaped the rhythm of each day. At fourteen, I lost my father, a teacher who believed education was something no one could take away. His faith in learning became a reason to keep moving forward.</p>
-              <p>In Grade 8, MindLeaps helped cover my school fees through Grade 12 and opened new doors through ballet and contemporary dance, IT, English, and Chemistry support. Today, I teach there myself—helping younger learners build confidence, strengthen their studies, and discover what they can do.</p>
+              <p>I recently completed high school at Ecole des Sciences Byimana, where I studied Mathematics, Chemistry, and Biology. I am now a student in Cohort 4 at Bridge2Rwanda’s Isomo Academy, continuing to grow as a learner and prepare for the next stage of my education.</p>
+              <p>My time with MindLeaps has grown into a role as a tutor, where I help younger learners strengthen their studies, build confidence, and discover what they can do.</p>
               <p>I taught myself guitar at eleven, practicing until music became a way to support choirs, perform with bands, and teach younger children. My story connects curiosity with service: I want to keep learning, share what I learn, and help others find their own path.</p>
             </div>
           </div>
@@ -100,19 +122,19 @@ document.querySelector('#root').innerHTML = `
       <section class="section education" id="education" aria-labelledby="education-title">
         <div class="section-inner">
           <div class="section-top">
-            <div><div class="section-kicker">02 / Education &amp; results</div><h2 class="section-heading" id="education-title">Learning that<br><em>keeps opening doors.</em></h2><p class="section-intro">A completed Advanced Level journey in Mathematics, Chemistry, and Biology, with results confirmed in Rwanda’s 2025/2026 national examinations.</p></div>
-            <span class="section-count">GRADE 12 · MCB</span>
+          <div><div class="section-kicker">02 / Education &amp; results</div><h2 class="section-heading" id="education-title">Learning that<br><em>keeps opening doors.</em></h2><p class="section-intro">After graduating from Ecole des Sciences Byimana in 2026, I joined Cohort 4 of Bridge2Rwanda’s Isomo Academy. The program focuses on literacy, critical thinking, and access to university.</p></div>
+          <span class="section-count">ISOMO ACADEMY · COHORT 4</span>
           </div>
           <div class="education-layout">
             <article class="education-card" data-testid="card-education">
-              <div class="education-card-kicker">Advanced Level · 2025/2026</div>
-              <h3>Ecole des Sciences Byimana</h3>
-              <p class="education-combination">Mathematics · Chemistry · Biology</p>
-              <div class="education-facts"><span>Grade 12</span><span>Ruhango, Rwanda</span><span>Graduated July 2026</span></div>
-              <div class="education-stamp"><span>National examinations</span><strong>PASS</strong></div>
+              <div class="education-card-kicker">Current program · Cohort 4</div>
+              <h3>Bridge2Rwanda Isomo Academy</h3>
+              <p class="education-combination">Building literacy, critical thinking, and preparation for university.</p>
+              <div class="education-facts"><span>Student</span><span>Cohort 4</span><span>Rwanda</span></div>
+              <div class="education-stamp"><span>Program information</span><a href="https://www.bridge2rwanda.org/" target="_blank" rel="noopener noreferrer">Bridge2Rwanda ↗</a></div>
             </article>
             <article class="results-card" aria-labelledby="results-title" data-testid="card-exam-results">
-              <div class="results-header"><div><span class="education-card-kicker">Official results</span><h3 id="results-title">2025/2026 Rwanda National Examinations</h3></div><span class="results-date">13 SEP<br>2026</span></div>
+              <div class="results-header"><div><span class="education-card-kicker">Ecole des Sciences Byimana</span><h3 id="results-title">2025/2026 Rwanda National Examinations</h3></div><span class="results-date">13 SEP<br>2026</span></div>
               <div class="grade-grid">
                 <div class="grade-row" data-testid="result-mathematics"><span>Mathematics</span><strong>A</strong></div>
                 <div class="grade-row" data-testid="result-biology"><span>Biology</span><strong>A</strong></div>
@@ -176,10 +198,29 @@ const modalPanel = modal.querySelector('.modal-panel');
 const closeButton = modal.querySelector('.modal-close');
 const navMenu = document.querySelector('#nav-links');
 const menuToggle = document.querySelector('.menu-toggle');
+const themeToggle = document.querySelector('.theme-toggle');
+const themePreferenceKey = 'mame-gedeon-theme';
 let activeGroup = '';
 let activeIndex = 0;
 let priorFocus = null;
 const groups = { activities, projects, certificates };
+
+function applyTheme(theme) {
+  document.body.dataset.theme = theme;
+  const isDark = theme === 'dark';
+  themeToggle.setAttribute('aria-pressed', String(isDark));
+  themeToggle.setAttribute('aria-label', `Switch to ${isDark ? 'light' : 'dark'} theme`);
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', isDark ? '#0c1714' : '#f5f6ef');
+}
+const savedTheme = localStorage.getItem(themePreferenceKey);
+applyTheme(savedTheme === 'dark' || savedTheme === 'light'
+  ? savedTheme
+  : 'dark');
+themeToggle.addEventListener('click', () => {
+  const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+  localStorage.setItem(themePreferenceKey, nextTheme);
+  applyTheme(nextTheme);
+});
 
 function renderModal() {
   const list = groups[activeGroup];

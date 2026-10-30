@@ -77,8 +77,8 @@ document.querySelector('#root').innerHTML = `
             <div class="hero-ctas"><a class="button button-primary" href="#about">Explore my story <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="mailto:m.gedeon4@isomo.rw">Write to me <span aria-hidden="true">↗</span></a></div>
             <div class="hero-note"><span class="note-line"></span><span>Learning with purpose. Leading with care.</span></div>
           </div>
-          <div class="portrait-stage reveal delay-1" aria-label="Portrait placeholder with Mame Gedeon's initials">
-            <div class="portrait-card"><div class="portrait-monogram" aria-hidden="true">MG</div><div class="portrait-label"><span>Scholar · Tutor · Advocate</span><span>Mame Gedeon</span></div></div>
+          <div class="portrait-stage reveal delay-1">
+            <div class="portrait-card"><img class="portrait-image" src="/mame-gedeon-portrait.jpeg" alt="Mame Gedeon smiling in a black suit and white shirt"><div class="portrait-label"><span>Scholar · Tutor · Advocate</span><span>Mame Gedeon</span></div></div>
             <div class="float-card"><strong>2025/2026</strong><span>MCB · GRADE 12</span></div>
             <div class="hero-location">RWANDA · EAST AFRICA</div>
           </div>

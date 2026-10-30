@@ -86,11 +86,11 @@ a { color: inherit; }
 .note-line { width:38px; height:1px; background:var(--red); }
 .portrait-stage { position:relative; justify-self:center; width:min(100%,390px); aspect-ratio:.83; }
 .portrait-card { position:absolute; inset:0 13px 15px 0; overflow:hidden; border-radius:46% 46% 13px 13px; background:linear-gradient(155deg,#d9e9dc 0%,#c4dbcf 52%,#a3c8ba 100%); box-shadow:0 28px 80px rgba(26,66,54,.18); }
-.portrait-card::before,.portrait-card::after { content:""; position:absolute; border:1px solid rgba(18,59,49,.22); border-radius:50%; }
+.portrait-image { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 34%; }
+.portrait-card::before,.portrait-card::after { content:""; position:absolute; z-index:1; pointer-events:none; border:1px solid rgba(18,59,49,.22); border-radius:50%; }
 .portrait-card::before { width:330px;height:330px;right:-83px;top:52px; }
 .portrait-card::after { width:260px;height:260px;right:-48px;top:87px; }
-.portrait-monogram { position:absolute; inset:0; display:grid; place-items:center; color:rgba(18,59,49,.76); font:500 clamp(105px,17vw,188px)/1 "Playfair Display",serif; letter-spacing:-.1em; padding-right:22px; }
-.portrait-label { position:absolute; bottom:25px; left:26px; z-index:2; display:flex; flex-direction:column; gap:5px; color:var(--forest-deep); }
+.portrait-label { position:absolute; bottom:25px; left:26px; z-index:2; display:flex; flex-direction:column; gap:5px; padding:10px 13px; border:1px solid rgba(255,255,255,.64); border-radius:10px; background:rgba(246,247,239,.84); backdrop-filter:blur(8px); color:var(--forest-deep); }
 .portrait-label span:first-child { font:500 10px "DM Mono",monospace; letter-spacing:.1em; text-transform:uppercase; }
 .portrait-label span:last-child { font:500 19px "Playfair Display",serif; }
 .float-card { position:absolute; z-index:3; right:-13px; top:16%; padding:14px 17px; border:1px solid rgba(255,255,255,.77); border-radius:14px; background:rgba(248,249,242,.74); box-shadow:0 14px 38px rgba(19,60,49,.11); backdrop-filter:blur(13px); }

@@ -193,6 +193,7 @@ document.querySelector('#root').innerHTML = `
             <div class="footer-meta">
               <span>© ${new Date().getFullYear()} Mame Gedeon. All rights reserved.</span>
               <span>Rwanda · East Africa</span>
+              <a class="admin-link" href="/admin/login" data-testid="link-admin">Admin</a>
             </div>
           </footer>
         </div>
@@ -207,6 +208,28 @@ document.querySelector('#root').innerHTML = `
     </div>
   </div>`;
 
+const isAdminLoginPage = window.location.pathname.replace(/\/+$/, '') === '/admin/login';
+if (isAdminLoginPage) {
+  document.querySelector('#root').innerHTML = `
+    <main class="admin-page">
+      <section class="admin-card" aria-labelledby="admin-title">
+        <a class="admin-brand" href="/" aria-label="Mame Gedeon portfolio home"><span class="brand-mark">M</span><span>Mame Gedeon</span></a>
+        <p class="admin-kicker">Portfolio management</p>
+        <h1 id="admin-title">Admin sign in</h1>
+        <p class="admin-description">This is where portfolio updates will be managed. Admin access is still in development.</p>
+        <form class="admin-form">
+          <label for="admin-email">Email address</label>
+          <input id="admin-email" type="email" autocomplete="username" placeholder="name@example.com" disabled>
+          <label for="admin-password">Password</label>
+          <input id="admin-password" type="password" autocomplete="current-password" placeholder="Enter your password" disabled>
+          <button type="button" disabled>Sign in</button>
+        </form>
+        <p class="admin-status" role="status">Sign-in is not available yet.</p>
+        <a class="admin-back-link" href="/">← Back to portfolio</a>
+      </section>
+    </main>`;
+  document.title = 'Admin Sign In | Mame Gedeon';
+} else {
 const modal = document.querySelector('#detail-modal');
 const modalPanel = modal.querySelector('.modal-panel');
 const closeButton = modal.querySelector('.modal-close');
@@ -366,3 +389,4 @@ function drawCanvas() {
 resizeCanvas();
 if (reducedMotion) drawCanvas(); else requestAnimationFrame(drawCanvas);
 window.addEventListener('resize', resizeCanvas, { passive: true });
+}

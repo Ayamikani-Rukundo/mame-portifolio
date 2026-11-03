@@ -2,5 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "buildCommand": "pnpm --filter @workspace/mame-gedeon-portfolio run build",
-  "outputDirectory": "artifacts/mame-gedeon-portfolio/dist/public"
+  "outputDirectory": "artifacts/mame-gedeon-portfolio/dist/public",
+  "rewrites": [
+    {
+      "source": "/admin/login",
+      "destination": "/"
+    }
+  ]
 }
